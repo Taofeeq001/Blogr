@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogr</title>
-    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section class="hero">
@@ -45,7 +45,10 @@
                 <img src="./images/logo.svg" alt="">
             </div>
             <div class="hamburger">
-                <img class="toggle" src="./images/icon-hamburger.svg" alt="">
+                <button class="toggle">
+                    <img class="close" src="./images/icon-close.svg" alt="">
+                    <img class="open" src="./images/icon-hamburger.svg" alt="">
+                </button>
             </div>            
         </nav>
         <div class="mobile-nav">
@@ -87,32 +90,38 @@
     </section>
     <section class="hero2">
         <h3>Designed for the future</h3>
-        <div class="capture">
-            <div class="fut-flex" >
-                <div class="future-content">
-                    <div>
-                        <h4>Introducing an extensible editor</h4>
-                        <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing; creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog</p>
-                    </div>
-                    <div>
-                        <h4>Robust content management</h4>
-                        <p>Flexible content managment enables users to easily move through posts. Increase the useability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control</p>
-                    </div>
+        <div class="hero2-content">
+            <div class="Introducing">
+                <div>
+                    <h4>Introducing an extensible editor</h4>
+                    <p>Blogr features an exceedingly intuitive interface which lets you focus on one thing; creating content. The editor supports management of multiple blogs and allows easy manipulation of embeds such as images, videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or change the looks of a blog</p>
                 </div>
-                <div class="capture-img"></div>
+                <div>
+                    <h4>Robust content management</h4>
+                    <p>Flexible content managment enables users to easily move through posts. Increase the useability of your blog by adding customized categories, sections, format, or flow. With this functionality, you're in full control</p>
+                </div>
+            </div>
+            <div class="right-sub">
+                <img src="./images/illustration-editor-mobile.svg" alt="">
+            </div>
+            <div class="right-bg">
+                <img src="./images/illustration-editor-desktop.svg" alt="">
             </div>
         </div>
         <div class="infrastructure">
-            <img src="./images/illustration-phones.svg" alt="">
-            <div class="infrastructure-content">
+            <img class="phone" src="./images/illustration-phones.svg" alt="">
+            <div class="state">
                 <h1>State of the Art Infrastructure</h1>
-                <p>With reliability and speed in mind. worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly. No matter where your readers are, keeping your site competitive. </p>
+                <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. This ensures your site will load instantly, no matter where your readers are keeping your site competitive</p>
             </div>
         </div>
     </section>
-    
-    <section class="free">
-        <div class="free-content">
+    <section class="hero3">
+        <img class="lap-desk" src="./images/illustration-laptop-desktop.svg" alt="">
+        <div class="lap-mobile">
+            <img src="./images/illustration-laptop-mobile.svg" alt="">
+        </div>
+        <div class="hero3-content">
             <div class="fcontent1">
                 <h4>Free, open, simple</h4>
                 <p>Blogr is a free and open source applicatoin backed by a large community of helpful developers. it supports features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools, and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
@@ -124,6 +133,7 @@
         </div>
     </section>
     <footer>
+        
         <div>
             <img src="./images/logo.svg" alt="">
         </div>
@@ -148,11 +158,21 @@
            <a href="">LinkedIn</a>  
         </div>
     </footer>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Kolapo Taofeeq Olayiwola</a>.
+    </div>
 </body>
 
 <script>
+    var open = document.querySelector(".open")
+    var close = document.querySelector(".close")
+
     document.querySelector(".toggle").addEventListener("click", ()=>{
         document.querySelector(".mobile-nav").classList.toggle('display')
+        open.style.display = "none"
+        close.style.display = "block"
     })
+
 </script>
 </html>
